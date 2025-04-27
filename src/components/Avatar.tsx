@@ -29,7 +29,7 @@ export default function Avatar({ animal, position, direction = 'right', isWalkin
       case 'Lobo': return '🐺';
       case 'Coelho': return '🐇';
       case 'Raposa': return '🦊';
-      case 'Gato': return '🐎';
+      case 'Cavalo': return '🐎';
       case 'Panda': return '🐼';
       default: return '🦊';
     }

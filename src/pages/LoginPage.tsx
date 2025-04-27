@@ -60,7 +60,7 @@ export default function LoginPage({ username, setUsername, animal, setAnimal, on
               onClick={() => setShowAnimalSelection(!showAnimalSelection)}
             >
               <span className="text-2xl">{animals.find(a => a.name === animal)?.emoji}</span>
-              <span>{animal}</span>
+              <span>{animal || "Escolha seu animal"}</span>
             </button>
           </div>
           
@@ -69,7 +69,7 @@ export default function LoginPage({ username, setUsername, animal, setAnimal, on
               {animals.map((a) => (
                 <button
                   key={a.name}
-                  className={`p-2 rounded-lg flex flex-col items-center ${animal === a.name ? 'bg-green-100 border-green-500' : 'hover:bg-gray-100'}`}
+                  className="p-2 rounded-lg flex flex-col items-center"
                   onClick={() => {
                     setAnimal(a.name);
                     setShowAnimalSelection(false);
